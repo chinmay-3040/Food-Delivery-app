@@ -3,19 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-<<<<<<< HEAD
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "build": "webpack --mode production"  
   },  
-=======
- "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "nodemon index.js",
-  "build": "react-scripts build"  
-},
->>>>>>> 7e501e99d1c2f2a91f7ffbe6e6c1055df960b93e
   "author": "chinmay",
   "license": "ISC",
   "dependencies": {
