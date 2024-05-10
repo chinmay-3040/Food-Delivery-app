@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const User = require('../models/User')
+const User = require('../models/User') /*user ka schema*/ 
 
 
 const { body, validationResult } = require('express-validator');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const jwtSecret = "MynameisEndtoEndYouTubeChannel$#"
+const jwtSecret = process.env.JWT_SECRET;
 
 router.post("/creatuser",
   [
@@ -63,6 +63,7 @@ router.post("/loginuser",
         }
 
         const pwdCompare = await bcrypt.compare(req.body.password, userData.password);
+
         if(!pwdCompare){
             return res.status(400).json({ errors: "Try logging in with correct credentials" });
         }
